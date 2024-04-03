@@ -7,6 +7,7 @@ import {
 } from "@mui/icons-material";
 import moment from "moment";
 import { transformImage } from "../../lib/features";
+import { Link } from "react-router-dom";
 
 const Profile = ({ user }) => {
   return (
@@ -33,6 +34,9 @@ const Profile = ({ user }) => {
         text={moment(user?.createdAt).fromNow()}
         Icon={<CalendarIcon />}
       />
+      <Link to="/admin">
+        <div>GO to AdminPage</div>
+      </Link>
     </Stack>
   );
 };
